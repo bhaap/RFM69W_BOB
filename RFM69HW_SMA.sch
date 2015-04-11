@@ -237,30 +237,6 @@ Standard 8.5x11 US Letter frame</description>
 </library>
 <library name="ChipsParts">
 <packages>
-<package name="RFM69W">
-<description>Radio module based on the RFM69 chip from HopeRF</description>
-<smd name="13" x="9.85" y="1" dx="4" dy="1.4" layer="1"/>
-<smd name="12" x="9.85" y="-1" dx="4" dy="1.4" layer="1"/>
-<smd name="14" x="9.85" y="3" dx="4" dy="1.4" layer="1"/>
-<smd name="15" x="9.85" y="5" dx="4" dy="1.4" layer="1"/>
-<smd name="16" x="9.85" y="7" dx="4" dy="1.4" layer="1"/>
-<smd name="11" x="9.85" y="-3" dx="4" dy="1.4" layer="1"/>
-<smd name="10" x="9.85" y="-5" dx="4" dy="1.4" layer="1"/>
-<smd name="9" x="9.85" y="-7" dx="4" dy="1.4" layer="1"/>
-<smd name="8" x="-9.85" y="-7" dx="4" dy="1.4" layer="1"/>
-<smd name="7" x="-9.85" y="-5" dx="4" dy="1.4" layer="1"/>
-<smd name="6" x="-9.85" y="-3" dx="4" dy="1.4" layer="1"/>
-<smd name="5" x="-9.85" y="-1" dx="4" dy="1.4" layer="1"/>
-<smd name="4" x="-9.85" y="1" dx="4" dy="1.4" layer="1"/>
-<smd name="3" x="-9.85" y="3" dx="4" dy="1.4" layer="1"/>
-<smd name="2" x="-9.85" y="5" dx="4" dy="1.4" layer="1"/>
-<smd name="1" x="-9.85" y="7" dx="4" dy="1.4" layer="1"/>
-<wire x1="-9.85" y1="8" x2="9.85" y2="8" width="0.127" layer="21"/>
-<wire x1="-9.85" y1="-8" x2="9.85" y2="-8" width="0.127" layer="21"/>
-<text x="0" y="6" size="1.27" layer="25" font="vector" align="bottom-center">&gt;NAME</text>
-<text x="0" y="0" size="1.778" layer="21" font="vector" align="center">RFM69W</text>
-<circle x="-6.985" y="6.985" radius="0.381" width="0.127" layer="21"/>
-</package>
 <package name="SOT-89">
 <description>SOT-89 Package from www.microchip.com/packaging</description>
 <smd name="2" x="0" y="-1.6875" dx="1.475" dy="0.9" layer="1" rot="R90"/>
@@ -290,30 +266,6 @@ Standard 8.5x11 US Letter frame</description>
 </package>
 </packages>
 <symbols>
-<symbol name="RFM69W">
-<description>Radio Transceiver, FSK, 433, 848, 915 MHz</description>
-<pin name="NSS" x="-17.78" y="12.7" length="middle"/>
-<pin name="MOSI" x="-17.78" y="10.16" length="middle"/>
-<pin name="MISO" x="-17.78" y="7.62" length="middle"/>
-<pin name="SCK" x="-17.78" y="5.08" length="middle"/>
-<pin name="3V3" x="0" y="20.32" length="middle" rot="R270"/>
-<pin name="ANT" x="17.78" y="12.7" length="middle" rot="R180"/>
-<pin name="RESET" x="-17.78" y="0" length="middle"/>
-<pin name="DIO0" x="-7.62" y="-15.24" length="middle" rot="R90"/>
-<pin name="DIO1" x="-5.08" y="-15.24" length="middle" rot="R90"/>
-<pin name="DIO2" x="-2.54" y="-15.24" length="middle" rot="R90"/>
-<pin name="DIO3" x="0" y="-15.24" length="middle" rot="R90"/>
-<pin name="DIO4" x="2.54" y="-15.24" length="middle" rot="R90"/>
-<pin name="DIO5" x="5.08" y="-15.24" length="middle" rot="R90"/>
-<pin name="GND@1" x="10.16" y="-15.24" length="middle" rot="R90"/>
-<pin name="GND@2" x="17.78" y="7.62" length="middle" rot="R180"/>
-<wire x1="-12.7" y1="15.24" x2="-12.7" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="-12.7" y1="-10.16" x2="12.7" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="12.7" y1="-10.16" x2="12.7" y2="15.24" width="0.254" layer="94"/>
-<wire x1="12.7" y1="15.24" x2="-12.7" y2="15.24" width="0.254" layer="94"/>
-<text x="5.08" y="15.748" size="1.27" layer="95" font="vector">&gt;NAME</text>
-<text x="-2.54" y="2.54" size="1.27" layer="96" font="vector">&gt;VALUE</text>
-</symbol>
 <symbol name="3-TERMINAL_REGULATOR">
 <description>3-terminal regulator</description>
 <pin name="VIN" x="-12.7" y="2.54" length="short"/>
@@ -340,36 +292,6 @@ Standard 8.5x11 US Letter frame</description>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="RFM69W" prefix="U">
-<description>Radio Transceiver Module, FSK, 433, 848, 915 MHz, SPI controlled, Mfr=HopeRF</description>
-<gates>
-<gate name="G$1" symbol="RFM69W" x="0" y="-2.54"/>
-</gates>
-<devices>
-<device name="" package="RFM69W">
-<connects>
-<connect gate="G$1" pin="3V3" pad="8"/>
-<connect gate="G$1" pin="ANT" pad="10"/>
-<connect gate="G$1" pin="DIO0" pad="2"/>
-<connect gate="G$1" pin="DIO1" pad="3"/>
-<connect gate="G$1" pin="DIO2" pad="4"/>
-<connect gate="G$1" pin="DIO3" pad="5"/>
-<connect gate="G$1" pin="DIO4" pad="6"/>
-<connect gate="G$1" pin="DIO5" pad="7"/>
-<connect gate="G$1" pin="GND@1" pad="9"/>
-<connect gate="G$1" pin="GND@2" pad="11"/>
-<connect gate="G$1" pin="MISO" pad="13"/>
-<connect gate="G$1" pin="MOSI" pad="14"/>
-<connect gate="G$1" pin="NSS" pad="15"/>
-<connect gate="G$1" pin="RESET" pad="1"/>
-<connect gate="G$1" pin="SCK" pad="12"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="MCP1701" prefix="U">
 <description>Voltage Regulator, LDO, fixed 1.8,2.5,3.0,3.3,5.0V, 500mW/Vdrop</description>
 <gates>
@@ -2686,6 +2608,30 @@ distributor DigiKey A97594-ND</description>
 <text x="-2.54" y="4.445" size="1.27" layer="25">&gt;NAME</text>
 <text x="-3.175" y="-5.715" size="1.27" layer="27">&gt;VALUE</text>
 </package>
+<package name="RFM69">
+<description>Radio module based on the RFM69 chip from HopeRF</description>
+<circle x="-6.985" y="6.985" radius="0.381" width="0.127" layer="21"/>
+<wire x1="-9.85" y1="8" x2="9.85" y2="8" width="0.127" layer="21"/>
+<wire x1="-9.85" y1="-8" x2="9.85" y2="-8" width="0.127" layer="21"/>
+<smd name="1" x="-9.85" y="7" dx="4" dy="1.4" layer="1"/>
+<smd name="2" x="-9.85" y="5" dx="4" dy="1.4" layer="1"/>
+<smd name="3" x="-9.85" y="3" dx="4" dy="1.4" layer="1"/>
+<smd name="4" x="-9.85" y="1" dx="4" dy="1.4" layer="1"/>
+<smd name="5" x="-9.85" y="-1" dx="4" dy="1.4" layer="1"/>
+<smd name="6" x="-9.85" y="-3" dx="4" dy="1.4" layer="1"/>
+<smd name="7" x="-9.85" y="-5" dx="4" dy="1.4" layer="1"/>
+<smd name="8" x="-9.85" y="-7" dx="4" dy="1.4" layer="1"/>
+<smd name="9" x="9.85" y="-7" dx="4" dy="1.4" layer="1"/>
+<smd name="10" x="9.85" y="-5" dx="4" dy="1.4" layer="1"/>
+<smd name="11" x="9.85" y="-3" dx="4" dy="1.4" layer="1"/>
+<smd name="12" x="9.85" y="-1" dx="4" dy="1.4" layer="1"/>
+<smd name="13" x="9.85" y="1" dx="4" dy="1.4" layer="1"/>
+<smd name="14" x="9.85" y="3" dx="4" dy="1.4" layer="1"/>
+<smd name="15" x="9.85" y="5" dx="4" dy="1.4" layer="1"/>
+<smd name="16" x="9.85" y="7" dx="4" dy="1.4" layer="1"/>
+<text x="0" y="6" size="1.27" layer="25" font="vector" align="bottom-center">&gt;NAME</text>
+<text x="0" y="0" size="1.778" layer="21" font="vector" align="center">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="BNC-FGND">
@@ -2701,6 +2647,30 @@ distributor DigiKey A97594-ND</description>
 <text x="-2.54" y="3.302" size="1.778" layer="95">&gt;NAME</text>
 <pin name="1" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
 <pin name="2" x="2.54" y="-2.54" visible="off" length="short" direction="pas" rot="R180"/>
+</symbol>
+<symbol name="RFM69">
+<description>Radio Transceiver, FSK, 433, 848, 915 MHz</description>
+<wire x1="-12.7" y1="15.24" x2="-12.7" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="-10.16" x2="12.7" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="12.7" y1="-10.16" x2="12.7" y2="15.24" width="0.254" layer="94"/>
+<wire x1="12.7" y1="15.24" x2="-12.7" y2="15.24" width="0.254" layer="94"/>
+<pin name="3V3" x="0" y="20.32" length="middle" rot="R270"/>
+<pin name="ANT" x="17.78" y="12.7" length="middle" rot="R180"/>
+<pin name="DIO0" x="-7.62" y="-15.24" length="middle" rot="R90"/>
+<pin name="DIO1" x="-5.08" y="-15.24" length="middle" rot="R90"/>
+<pin name="DIO2" x="-2.54" y="-15.24" length="middle" rot="R90"/>
+<pin name="DIO3" x="0" y="-15.24" length="middle" rot="R90"/>
+<pin name="DIO4" x="2.54" y="-15.24" length="middle" rot="R90"/>
+<pin name="DIO5" x="5.08" y="-15.24" length="middle" rot="R90"/>
+<pin name="GND@1" x="10.16" y="-15.24" length="middle" rot="R90"/>
+<pin name="GND@2" x="17.78" y="7.62" length="middle" rot="R180"/>
+<pin name="MISO" x="-17.78" y="7.62" length="middle"/>
+<pin name="MOSI" x="-17.78" y="10.16" length="middle"/>
+<pin name="NSS" x="-17.78" y="12.7" length="middle"/>
+<pin name="RESET" x="-17.78" y="0" length="middle"/>
+<pin name="SCK" x="-17.78" y="5.08" length="middle"/>
+<text x="5.08" y="15.748" size="1.27" layer="95" font="vector">&gt;NAME</text>
+<text x="-2.54" y="2.54" size="1.27" layer="96" font="vector">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -2729,6 +2699,58 @@ DigiKey A97594-ND&lt;/a&gt;</description>
 </device>
 </devices>
 </deviceset>
+<deviceset name="RFM69" prefix="U">
+<description>Radio Transceiver Module, FSK, 433, 848, 915 MHz, SPI controlled, Mfr=HopeRF</description>
+<gates>
+<gate name="G$1" symbol="RFM69" x="0" y="-2.54"/>
+</gates>
+<devices>
+<device name="W" package="RFM69">
+<connects>
+<connect gate="G$1" pin="3V3" pad="8"/>
+<connect gate="G$1" pin="ANT" pad="10"/>
+<connect gate="G$1" pin="DIO0" pad="2"/>
+<connect gate="G$1" pin="DIO1" pad="3"/>
+<connect gate="G$1" pin="DIO2" pad="4"/>
+<connect gate="G$1" pin="DIO3" pad="5"/>
+<connect gate="G$1" pin="DIO4" pad="6"/>
+<connect gate="G$1" pin="DIO5" pad="7"/>
+<connect gate="G$1" pin="GND@1" pad="9"/>
+<connect gate="G$1" pin="GND@2" pad="11"/>
+<connect gate="G$1" pin="MISO" pad="13"/>
+<connect gate="G$1" pin="MOSI" pad="14"/>
+<connect gate="G$1" pin="NSS" pad="15"/>
+<connect gate="G$1" pin="RESET" pad="1"/>
+<connect gate="G$1" pin="SCK" pad="12"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="HW" package="RFM69">
+<connects>
+<connect gate="G$1" pin="3V3" pad="8"/>
+<connect gate="G$1" pin="ANT" pad="10"/>
+<connect gate="G$1" pin="DIO0" pad="2"/>
+<connect gate="G$1" pin="DIO1" pad="3"/>
+<connect gate="G$1" pin="DIO2" pad="4"/>
+<connect gate="G$1" pin="DIO3" pad="5"/>
+<connect gate="G$1" pin="DIO4" pad="6"/>
+<connect gate="G$1" pin="DIO5" pad="7"/>
+<connect gate="G$1" pin="GND@1" pad="9"/>
+<connect gate="G$1" pin="GND@2" pad="11"/>
+<connect gate="G$1" pin="MISO" pad="13"/>
+<connect gate="G$1" pin="MOSI" pad="14"/>
+<connect gate="G$1" pin="NSS" pad="15"/>
+<connect gate="G$1" pin="RESET" pad="1"/>
+<connect gate="G$1" pin="SCK" pad="12"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -2742,7 +2764,7 @@ DigiKey A97594-ND&lt;/a&gt;</description>
 </classes>
 <parts>
 <part name="FRAME1" library="SparkFun-Aesthetics" deviceset="FRAME-LETTER" device=""/>
-<part name="U1" library="ChipsParts" deviceset="RFM69W" device="" value="RFM69W"/>
+<part name="U1" library="custom_parts" deviceset="RFM69" device="HW" value="RFM69HW"/>
 <part name="U2" library="ChipsParts" deviceset="MCP1701" device=""/>
 <part name="JP1" library="SparkFun-Connectors" deviceset="M08" device="LONGPADS"/>
 <part name="R1" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="4k7"/>
